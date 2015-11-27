@@ -19,12 +19,17 @@
 #define INIT 1 
 #include "crobots.h"
 
+/*****************************************************************************/
+/* Function declarations                                                     */
+/*****************************************************************************/
 void init_robot(int);
 
 #ifdef UNIX
 #include <signal.h>
 extern int catch_int();
 #endif
+/*****************************************************************************/
+
 #ifdef LATTICE
 int _stack = 6000;  /* Lattice C: give more stack than default of 2048 */
 #endif
