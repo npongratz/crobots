@@ -690,7 +690,7 @@ int free_robot(int i)
     free(temp);
   }
 
-  return 0;
+  return EXIT_SUCCESS;
 }
 
 
