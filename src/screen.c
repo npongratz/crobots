@@ -355,9 +355,7 @@ int n;
 }
 
 
-show_cycle(l)
-
-long l;
+void show_cycle(long l)
 {
   move(LINES-1,col_3);
   printw("%7ld",l);

@@ -210,6 +210,7 @@ void end_disp();
 void init_robot(int);
 void match(int, long, char**, int);
 void rand_pos(int);
+void show_cycle(long);
 void trace(char*);
 
 #ifdef UNIX
