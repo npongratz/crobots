@@ -699,9 +699,9 @@ int i;
 
 catch_int()
 {
-  int i;
 /* 
-  for (i = 0; i < MAXROBOTS; i++) {
+  int i;
+  for (int i = 0; i < MAXROBOTS; i++) {
     cur_robot = &robots[i];
       printf("\nrobot: %d",i);
       printf("\tstatus......%d",cur_robot->status);
