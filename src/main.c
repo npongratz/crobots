@@ -34,9 +34,7 @@ char *version   = "CROBOTS - version 1.1, December, 1985\n";
 char *copyright = "Copyright 1985 by Tom Poindexter, All rights reserved.\n";
 
 
-main(argc,argv)
-int argc;
-char *argv[];
+int main(int argc, char *argv[])
 {
   long limit = CYCLE_LIMIT;
   int matches = 0;
