@@ -19,6 +19,8 @@
 #define INIT 1 
 #include "crobots.h"
 
+void init_robot(int);
+
 #ifdef UNIX
 #include <signal.h>
 extern int catch_int();
@@ -631,9 +633,7 @@ char *f;
 
 
 /* init a robot */
-init_robot(i)
-
-int i;
+void init_robot(int i)
 {
   register int j;
 
