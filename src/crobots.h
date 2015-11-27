@@ -206,6 +206,7 @@ struct intrin {
 /* Function declarations                                                     */
 /*****************************************************************************/
 void count_miss(int, int);
+void end_disp();
 void init_robot(int);
 void match(int, long, char**, int);
 void rand_pos(int);

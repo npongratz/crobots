@@ -73,7 +73,7 @@ init_disp()
 
 /* end_disp - cleanup and end display */
 
-end_disp()
+void end_disp()
 {
   nocrmode();
   echo();
