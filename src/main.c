@@ -697,7 +697,8 @@ int i;
 #ifdef UNIX
 /* catch_int - catch the interrupt signal and die, cleaning screen */
 
-catch_int()
+/* TODO: determine whether this should return void */
+int catch_int()
 {
 /* 
   int i;
