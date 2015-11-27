@@ -4,11 +4,20 @@ OBJS =  main.o grammar.o lexanal.o compiler.o cpu.o intrins.o display.o screen.o
 
 SOURCES = crobots.h compiler.h tokens.h main.c grammar.y grammar.c lexanal.l lexanal.c compiler.c cpu.c intrins.c display.c screen.c screend.c motion.c 
 
-DOS = main.c grammar.c lexanal.c compiler.c cpu.c intrins.c display.c screend.c motion.c 
-
+DOS  = main.c grammar.c lexanal.c compiler.c cpu.c intrins.c display.c screend.c motion.c 
 DOSA = main.c grammar.c lexanal.c compiler.c cpu.c intrins.c display.c screena.c motion.c 
 
-# Xenix cc flags: optimize(O), omit stack checking(K), separate text and data(i)
+# Xenix $(CC) flags: optimize(O), omit stack checking(K), separate text and data(i)
+CC    = /usr/bin/cc
+EGREP = /usr/bin/egrep
+LEX   = /usr/bin/lex
+# TODO: Find lint for darwin/OS X
+LINT  = true
+LPR   = /usr/bin/lpr
+MV    = /bin/mv
+PR    = /usr/bin/pr
+RM    = /bin/rm
+YACC  = /usr/bin/yacc
 
 CFLAGS = -O -K -i -DUNIX
 LIBS = -lm -lcurses -ltermlib
@@ -21,53 +30,54 @@ LIBS = -lm -lcurses -ltermlib
 #  confused when '#ifdef symbol .... #endif' are nested.
 
 crobots: 	$(OBJS)
-		cc -s $(CFLAGS) $(OBJS) -o crobots $(LIBS)
+		$(CC) -s $(CFLAGS) $(OBJS) -o crobots $(LIBS)
 
 main.o: 	crobots.h main.c
-		cc $(CFLAGS) -c main.c
+		$(CC) $(CFLAGS) -c main.c
 
 grammar.o: 	crobots.h compiler.h grammar.y
-		yacc -d grammar.y
-		egrep -v '# line|^#$$' y.tab.c >grammar.c
-		rm y.tab.c
-		mv y.tab.h tokens.h
-		cc $(CFLAGS) -c grammar.c
+		$(YACC) -d grammar.y
+		$(EGREP) -v '# line|^#$$' y.tab.c >grammar.c
+		$(RM) y.tab.c
+		$(MV) y.tab.h tokens.h
+		$(CC) $(CFLAGS) -c grammar.c
 
 lexanal.o: 	crobots.h compiler.h lexanal.l grammar.y
-		lex lexanal.l
-		egrep -v '# ifdef|# endif' lex.yy.c >lexanal.c
-		rm lex.yy.c
-		cc $(CFLAGS) -c lexanal.c
+		$(LEX) lexanal.l
+		$(EGREP) -v '# ifdef|# endif' lex.yy.c >lexanal.c
+		$(RM) lex.yy.c
+		$(CC) $(CFLAGS) -c lexanal.c
 
 compiler.o: 	crobots.h compiler.h tokens.h compiler.c
-		cc $(CFLAGS) -c compiler.c
+		$(CC) $(CFLAGS) -c compiler.c
 	
 cpu.o: 		crobots.h grammar.y cpu.c
-		cc $(CFLAGS) -c cpu.c
+		$(CC) $(CFLAGS) -c cpu.c
 	
 intrins.o:	crobots.h intrins.c
-		cc $(CFLAGS) -c intrins.c
+		$(CC) $(CFLAGS) -c intrins.c
 	
 display.o:	crobots.h display.c
-		cc $(CFLAGS) -c display.c
+		$(CC) $(CFLAGS) -c display.c
 	
 screen.o:	crobots.h screen.c
-		cc $(CFLAGS) -c screen.c
+		$(CC) $(CFLAGS) -c screen.c
 	
 motion.o:	crobots.h motion.c
-		cc $(CFLAGS) -c motion.c
+		$(CC) $(CFLAGS) -c motion.c
 	
 dos:
-		cc -s -dos -K -i -O -DDOS $(DOS) -o crobotsx.exe -lm
-		/bin/rm *.o
+		$(CC) -s -dos -K -i -O -DDOS $(DOS) -o crobotsx.exe -lm
+		$(RM) *.o
 
 dosa:
-		cc -s -dos -K -i -O -DDOS $(DOSA) -o crobotsa.exe -lm
-		/bin/rm *.o
+		$(CC) -s -dos -K -i -O -DDOS $(DOSA) -o crobotsa.exe -lm
+		$(RM) *.o
 print:
-		pr -t $(SOURCES) | lpr
+		$(PR) -t $(SOURCES) | $(LPR)
 
 lint:
-		lint -abc *.c | tee crobots.lint
+		@echo 'TODO: this does nothing at the moment. Must find lint for darwin/OS X'
+		$(LINT) -abc *.c | tee crobots.lint
 		@echo 'lint output kept in crobots.lint'
 
