@@ -19,18 +19,6 @@
 #define INIT 1 
 #include "crobots.h"
 
-/*****************************************************************************/
-/* Function declarations                                                     */
-/*****************************************************************************/
-void init_robot(int);
-void trace(char*);
-
-#ifdef UNIX
-#include <signal.h>
-extern int catch_int();
-#endif
-/*****************************************************************************/
-
 #ifdef LATTICE
 int _stack = 6000;  /* Lattice C: give more stack than default of 2048 */
 #endif
@@ -551,9 +539,7 @@ int n;
 /*           dependent on MAXROBOTS <= 4 */
 /*            put robots in separate quadrant */
 
-rand_pos(n)
-
-int n;
+void rand_pos(int n)
 {
   int i, k;
   int quad[4];

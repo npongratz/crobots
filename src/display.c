@@ -13,7 +13,6 @@
 
 #include "crobots.h"
 
-
 /* update_disp - update all robots and missiles */
 
 update_disp()
@@ -48,9 +47,7 @@ update_disp()
 
 /* count_miss - update the explosion counter */
 
-count_miss(i,j) 
-
-int i, j;
+void count_miss(int i, int j)
 {
   if (missiles[i][j].count <= 0)
     missiles[i][j].stat = AVAIL;

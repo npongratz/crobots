@@ -202,4 +202,20 @@ struct intrin {
 #endif
 ;
 
+/*****************************************************************************/
+/* Function declarations                                                     */
+/*****************************************************************************/
+void count_miss(int, int);
+void init_robot(int);
+void rand_pos(int);
+void trace(char*);
+
+#ifdef UNIX
+#include <signal.h>
+extern int catch_int();
+#endif
+/*****************************************************************************/
+
+
+
 /* end of crobots.h header */
