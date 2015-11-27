@@ -7,7 +7,6 @@ SOURCES = crobots.h compiler.h tokens.h main.c grammar.y grammar.c lexanal.l lex
 DOS  = main.c grammar.c lexanal.c compiler.c cpu.c intrins.c display.c screend.c motion.c 
 DOSA = main.c grammar.c lexanal.c compiler.c cpu.c intrins.c display.c screena.c motion.c 
 
-# Xenix $(CC) flags: optimize(O), omit stack checking(K), separate text and data(i)
 CC    = /usr/bin/cc
 EGREP = /usr/bin/egrep
 LEX   = /usr/bin/lex
@@ -19,7 +18,8 @@ PR    = /usr/bin/pr
 RM    = /bin/rm
 YACC  = /usr/bin/yacc
 
-CFLAGS = -O -K -i -DUNIX
+# clang flags: optimize (-O2), emit all warnings (-Wall), set UNIX (-DUNIX)
+CFLAGS = -O2 -Wall -DUNIX
 LIBS = -lm -lcurses -ltermlib
 
 # note - grammar.c and lexanal.c: both yacc (grammar.y) and lex (lexanal.l)
