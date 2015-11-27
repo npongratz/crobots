@@ -209,6 +209,7 @@ void count_miss(int, int);
 void end_disp();
 void init_robot(int);
 void match(int, long, char**, int);
+void move_miss(int);
 void rand_pos(int);
 void show_cycle(long);
 void trace(char*);

@@ -293,8 +293,7 @@ int displ;
 /* move_miss - updates all missile positions */
 /*             parm 'displ' control display */
 
-move_miss(displ)
-int displ;
+void move_miss(int displ)
 {
   register int r, i;
   int n, j;
