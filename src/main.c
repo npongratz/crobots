@@ -13,6 +13,7 @@
 
 
 #include <stdio.h>
+#include <stdlib.h>
 
 /* INIT causes externals in crobots.h to have storage, & init intrinsic table */
 #define INIT 1 
