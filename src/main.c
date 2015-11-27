@@ -23,6 +23,7 @@
 /* Function declarations                                                     */
 /*****************************************************************************/
 void init_robot(int);
+void trace(char*);
 
 #ifdef UNIX
 #include <signal.h>
@@ -584,9 +585,7 @@ int n;
 
 /* trace - compile and run the robot in debug mode */
 
-trace(f)
-
-char *f;
+void trace(char *f)
 {
   int c = 1; 
 
