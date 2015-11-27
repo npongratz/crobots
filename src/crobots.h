@@ -207,6 +207,7 @@ struct intrin {
 /*****************************************************************************/
 void count_miss(int, int);
 void init_robot(int);
+void match(int, long, char**, int);
 void rand_pos(int);
 void trace(char*);
 

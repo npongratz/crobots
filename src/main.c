@@ -364,13 +364,7 @@ int n;
 
 
 /* match - run a series of matches */
-
-match(m,l,f,n)
-
-int m;
-long l;
-char *f[];
-int n;
+void match(int m, long l, char *f[], int n)
 {
   int num_robots = 0;
   int robotsleft;
