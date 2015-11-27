@@ -54,7 +54,7 @@ long pop()
 /* any errors (stack collision, missing functions, etc) cause the 'main' */
 /* function to be restarted, with a clean stack; signal by r_flag = 1 */
 
-cycle()
+void cycle()
 {
   int j;
   int c;

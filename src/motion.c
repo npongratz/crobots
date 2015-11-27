@@ -182,8 +182,7 @@ struct {
 /* move_robots - update the postion of all robots */
 /*               parm 'displ' controls call to field display */
 
-move_robots(displ)
-int displ;
+void move_robots(int displ)
 {
   register int i, n;
   long lsin(), lcos();
