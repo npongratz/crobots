@@ -667,9 +667,7 @@ int i;
 
 /* free_robot - frees any allocated storage in a robot */
 
-free_robot(i) 
-
-int i;
+int free_robot(int i)
 {
   struct func *temp;
 
@@ -691,6 +689,7 @@ int i;
     free(temp);
   }
 
+  return 0;
 }
 
 
