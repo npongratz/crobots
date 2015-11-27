@@ -614,7 +614,7 @@ char *f;
 
   cur_robot = &robots[0];
 
-  fprintf("\n\nReady to debug, use `d' to dump robot info, `q' to quit.\n\n");
+  fprintf(stdout, "\n\nReady to debug, use `d' to dump robot info, `q' to quit.\n\n");
 
   while (c) {  
     cycle();
