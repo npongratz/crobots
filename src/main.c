@@ -55,8 +55,8 @@ int main(int argc, char *argv[])
   /* print version, copyright notice, GPL notice */
 
   fprintf(stderr,"\n");
-  fprintf(stderr,version);
-  fprintf(stderr,copyright);
+  fprintf(stderr,"%s",version);
+  fprintf(stderr,"%s",copyright);
   fprintf(stderr,"\n     CROBOTS - fighting robots C compiler and virtual computer\n");
   fprintf(stderr,"       distributed under the GNU GPL, version 2.\n");
   fprintf(stderr,"\n");
