@@ -55,7 +55,7 @@ long atol();
 int count();
 
 # define YYNEWLINE 10
-yylex(){
+int yylex(){
 int nstr; extern int yyprevious;
 while((nstr = yylook()) >= 0)
 yyfussy: switch(nstr){
