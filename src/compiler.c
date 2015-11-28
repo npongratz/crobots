@@ -625,9 +625,7 @@ int close_while()
 
 /* decompile - print machine code */
 
-decompile(code)
-
-struct instr *code;
+int decompile(struct instr *code)
 {
 
   while (code->ins_type != NOP) {
