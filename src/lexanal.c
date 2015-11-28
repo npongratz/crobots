@@ -1000,28 +1000,25 @@ int yylook(){
 
 int yyback(int *p, int m)
 {
-if (p==0) return(0);
-while (*p)
-	{
-	if (*p++ == m)
-		return(1);
-	}
-return(0);
+  if (p==0) return(0);
+  while (*p) {
+    if (*p++ == m)
+      return(1);
+  }
+  return(0);
 }
 
 /* the following are only used in the lex library */
-int yyinput(){
+int yyinput() {
 	return(input());
 }
 
-int yyoutput(c)
-  int c; {
+int yyoutput(int c) {
 	output(c);
   return 0;
 }
 
-int yyunput(c)
-  int c; {
+int yyunput(int c) {
 	unput(c);
   return 0;
 }
