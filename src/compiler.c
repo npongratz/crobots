@@ -268,7 +268,6 @@ void end_func()
 
 
 /* allocvar - allocates a variable in a pool, returns offset */
-
 int allocvar(char s[], char *pool)
 {
   register int i;
@@ -289,11 +288,7 @@ int allocvar(char s[], char *pool)
 
 
 /* findvar - returns offset of variable in a pool */
-
-findvar(s,pool)
-
-char s[];
-char *pool;
+int findvar(char s[], char *pool)
 {
   register int i;
 
