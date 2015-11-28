@@ -932,21 +932,21 @@ int yylook(){
 					}
 				}
 			if ((yystate = yystate->yyother) && (yyt= yystate->yystoff) != yycrank){
-				if(debug)fprintf(yyout,"fall back to state %d\n",yystate-yysvec-1);
+				if(debug) fprintf(yyout,"fall back to state %ld\n",yystate-yysvec-1);
 				goto tryagain;
 				}
 			else
 				{unput(*--yylastch);break;}
 		contin:
 			if(debug){
-				fprintf(yyout,"state %d char ",yystate-yysvec-1);
+				fprintf(yyout,"state %ld char ",yystate-yysvec-1);
 				allprint(yych);
 				putchar('\n');
 				}
 			;
 			}
 		if(debug){
-			fprintf(yyout,"stopped at %d with ",*(lsp-1)-yysvec-1);
+			fprintf(yyout,"stopped at %ld with ",*(lsp-1)-yysvec-1);
 			allprint(yych);
 			putchar('\n');
 			}
