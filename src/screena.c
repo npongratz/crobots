@@ -54,8 +54,7 @@ void init_disp()
 
 
 /* end_disp - cleanup and end display */
-
-end_disp() {}
+void end_disp() {}
 
 
 /* playfield characters */
@@ -377,9 +376,7 @@ int n;
 }
 
 
-show_cycle(l)
-
-long l;
+void show_cycle(long l)
 {
   move(LINES,col_3);
   printw("%7ld",l);

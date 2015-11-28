@@ -72,7 +72,6 @@ void init_disp()
 
 
 /* end_disp - cleanup and end display */
-
 void end_disp()
 {
   nocrmode();
