@@ -374,7 +374,6 @@ void dumpoff(char *pool)
 /* the current instruction pointer within the code space */
 
 /* efetch - emit a fetch instruction */
-
 int efetch(int offset)
 {
   if (++num_instr == CODESPACE) {
@@ -391,7 +390,6 @@ int efetch(int offset)
 
 
 /* estore - emit a store instruction */
-
 int estore(int offset, int operator)
 {
   if (++num_instr == CODESPACE) {
@@ -409,10 +407,7 @@ int estore(int offset, int operator)
 
 
 /* econst - emit a constant instruction */
-
-econst(c)
-
-long c;
+int econst(long c)
 {
   if (++num_instr == CODESPACE) {
     r_flag = 1;
