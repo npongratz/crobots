@@ -485,9 +485,7 @@ int ebranch()
 
 
 /* echop - emit a chop instruction */
-
-echop()
-
+int echop()
 {
   if (++num_instr == CODESPACE) {
     r_flag = 1;
