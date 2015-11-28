@@ -272,6 +272,7 @@ loop:
 		output('*');
 		output(c1);
 	}
+  return 0;
 }
 
 
@@ -288,6 +289,7 @@ int count()
 			column++;
 
 	ECHO;
+  return 0;
 }
 
 
@@ -303,11 +305,13 @@ int lexgetc()
 int lexungetc(int c)
 {
   ungetc(c,f_in);
+  return 0;
 }
 
 int lexputc(int c)
 {
   fputc(c,f_out);
+  return 0;
 }
 
 /* these two dummy routines for lex's debug options */
@@ -1013,9 +1017,11 @@ int yyinput(){
 int yyoutput(c)
   int c; {
 	output(c);
+  return 0;
 }
 
 int yyunput(c)
-   int c; {
+  int c; {
 	unput(c);
+  return 0;
 }
