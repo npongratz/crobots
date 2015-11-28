@@ -105,7 +105,7 @@ static int col_3;    /* column for cpu cycle count*/
 
 /* draw_field - draws the playing field and status boxes */
 
-draw_field()
+void draw_field()
 {
   int i, j;
 
