@@ -454,9 +454,7 @@ int efcall(int c)
 
 
 /* eretsub - emit a retsub instruction */
-
-eretsub()
-
+int eretsub()
 {
   if (++num_instr == CODESPACE) {
     r_flag = 1;
