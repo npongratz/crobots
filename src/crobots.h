@@ -215,6 +215,7 @@ void move_robots(int);
 void rand_pos(int);
 void show_cycle(long);
 void trace(char*);
+void update_disp();
 
 #ifdef UNIX
 #include <signal.h>

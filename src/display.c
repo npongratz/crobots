@@ -15,7 +15,7 @@
 
 /* update_disp - update all robots and missiles */
 
-update_disp()
+void update_disp()
 {
   register int i, j;
 
