@@ -624,7 +624,6 @@ int close_while()
 
 
 /* decompile - print machine code */
-
 int decompile(struct instr *code)
 {
 

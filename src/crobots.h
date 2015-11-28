@@ -212,7 +212,8 @@ void binaryop(int);
 void comp(char**, int);
 void count_miss(int, int);
 void cycle();
-void decinstr(struct instr *code);
+void decinstr(struct instr*);
+int decompile(struct instr*)
 void draw_field();
 void dumpoff(char*);
 void dumpvar(long*, int);
