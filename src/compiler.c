@@ -302,12 +302,7 @@ int findvar(char s[], char *pool)
 
 
 /* stackid - stacks an identifier, note pointer to stack offset */
-
-stackid(id,stack,ptr)
-
-char id[];
-char *stack;
-int *ptr;
+int stackid(char id[], char *stack, int *ptr)
 {
   if (*ptr < MAXSYM - 1) {
     (*ptr)++;				/* the ptr itself is incremented */
