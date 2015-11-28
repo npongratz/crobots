@@ -241,7 +241,7 @@ fprintf(yyout,"bad switch yylook %d",nstr);
 } return(0); }
 /* end of yylex */
 
-yywrap()
+int yywrap()
 {
 	return(1);
 }
