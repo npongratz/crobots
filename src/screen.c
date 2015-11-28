@@ -191,10 +191,7 @@ void plot_robot(int n)
 
 /* plot_miss - plot the missile position */
 
-plot_miss(r,n)
-
-int r;
-int n;
+void plot_miss(int r, int n)
 {
   int i, k;
   register int new_x, new_y;

@@ -224,6 +224,7 @@ void match(int, long, char**, int);
 void move_miss(int);
 void move_robots(int);
 void play(char**, int);
+void plot_miss(int, int);
 void plot_robot(int);
 void rand_pos(int);
 void reset_comp();
