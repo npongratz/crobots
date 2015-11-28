@@ -14,42 +14,42 @@
 #include "crobots.h"
 #include "compiler.h"
 
-# define IDENTIFIER 257
-# define CONSTANT 258
-# define INC_OP 259
-# define DEC_OP 260
-# define LEFT_OP 261
-# define RIGHT_OP 262
-# define LE_OP 263
-# define GE_OP 264
-# define EQ_OP 265
-# define NE_OP 266
-# define AND_OP 267
-# define OR_OP 268
-# define MUL_ASSIGN 269
-# define DIV_ASSIGN 270
-# define MOD_ASSIGN 271
-# define ADD_ASSIGN 272
-# define SUB_ASSIGN 273
-# define LEFT_ASSIGN 274
-# define RIGHT_ASSIGN 275
-# define AND_ASSIGN 276
-# define XOR_ASSIGN 277
-# define OR_ASSIGN 278
-# define EXTERN 279
-# define AUTO 280
-# define REGISTER 281
-# define INT 282
-# define LONG 283
-# define IF 284
-# define ELSE 285
-# define WHILE 286
-# define FOR 287
-# define RETURN 288
-# define BREAK 289
-# define U_NEGATIVE 290
-# define U_NOT 291
-# define U_ONES 292
+#define IDENTIFIER 257
+#define CONSTANT 258
+#define INC_OP 259
+#define DEC_OP 260
+#define LEFT_OP 261
+#define RIGHT_OP 262
+#define LE_OP 263
+#define GE_OP 264
+#define EQ_OP 265
+#define NE_OP 266
+#define AND_OP 267
+#define OR_OP 268
+#define MUL_ASSIGN 269
+#define DIV_ASSIGN 270
+#define MOD_ASSIGN 271
+#define ADD_ASSIGN 272
+#define SUB_ASSIGN 273
+#define LEFT_ASSIGN 274
+#define RIGHT_ASSIGN 275
+#define AND_ASSIGN 276
+#define XOR_ASSIGN 277
+#define OR_ASSIGN 278
+#define EXTERN 279
+#define AUTO 280
+#define REGISTER 281
+#define INT 282
+#define LONG 283
+#define IF 284
+#define ELSE 285
+#define WHILE 286
+#define FOR 287
+#define RETURN 288
+#define BREAK 289
+#define U_NEGATIVE 290
+#define U_NOT 291
+#define U_ONES 292
 #define yyclearin yychar = -1
 #define yyerrok yyerrflag = 0
 extern int yychar;
@@ -61,14 +61,14 @@ extern short yyerrflag;
 #define YYSTYPE int
 #endif
 YYSTYPE yylval, yyval;
-# define YYERRCODE 256
+#define YYERRCODE 256
 short yyexca[] ={
 -1, 1,
 	0, -1,
 	-2, 0,
 	};
-# define YYNPROD 144
-# define YYLAST 536
+#define YYNPROD 144
+#define YYLAST 536
 short yyact[]={
 
   72, 107, 158,  22,  15,  16, 105,  77,  17, 137,
@@ -240,10 +240,10 @@ short yydef[]={
  131, 127,  11,  20,   0,   0,  99,   0,  90,  91,
   95,  94, 104,   0, 101,   0,  98, 100,   0,  93,
  105, 107, 102,  92 };
-# define YYFLAG -1000
-# define YYERROR goto yyerrlab
-# define YYACCEPT return(0)
-# define YYABORT return(1)
+#define YYFLAG -1000
+#define YYERROR goto yyerrlab
+#define YYACCEPT return(0)
+#define YYABORT return(1)
 
 /*	parser for yacc output	*/
 
