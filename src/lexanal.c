@@ -17,7 +17,10 @@ int yyleng; extern char yytext[];
 int yymorfg;
 extern char *yysptr, yysbuf[];
 int yytchar;
+/* avoiding error "initializer element is not compile-time constant"
 FILE *yyin = {stdin}, *yyout = {stdout};
+*/
+FILE *yyin, *yyout;
 extern int yylineno;
 struct yysvf { 
 	struct yywork *yystoff;
@@ -57,6 +60,7 @@ int count();
 # define YYNEWLINE 10
 int yylex(){
   int nstr; extern int yyprevious;
+  yyout = stdout;
   while((nstr = yylook()) >= 0)
   yyfussy: switch(nstr){
   case 0:
@@ -870,6 +874,9 @@ int yylook(){
 	struct yywork *yyr;
 	int debug;
 	char *yylastch;
+
+  yyout = stdout;
+
 	/* start off machines */
 	debug = 0;
 	yyfirst=1;
