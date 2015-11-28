@@ -500,9 +500,7 @@ int echop()
 
 
 /* eframe - emit a stack frame instruction */
-
-eframe()
-
+int eframe()
 {
   if (++num_instr == CODESPACE) {
     r_flag = 1;
