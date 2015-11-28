@@ -270,7 +270,7 @@ loop:
 }
 
 
-count()
+int count()
 {
 	int i;
 
@@ -295,22 +295,22 @@ int lexgetc()
   return ((c == EOF) ? 0 : c);
 }
 
-lexungetc(c)
+int lexungetc(c)
 int c;
 {
   ungetc(c,f_in);
 }
 
-lexputc(c)
+int lexputc(c)
 int c;
 {
   fputc(c,f_out);
 }
 
 /* these two dummy routines for lex's debug options */
-allprint() {}
+void allprint() {}
 
-sprint() {} 
+void sprint(char *s) {} 
 
 int yyvstop[] = {
 0,
@@ -862,7 +862,8 @@ char *yysptr = yysbuf;
 int *yyfnd;
 extern struct yysvf *yyestate;
 int yyprevious = YYNEWLINE;
-yylook(){
+
+int yylook(){
 	register struct yysvf *yystate, **lsp;
 	register struct yywork *yyt;
 	struct yysvf *yyz;
@@ -986,8 +987,8 @@ yylook(){
 		if(debug)putchar('\n');
 		}
 	}
-yyback(p, m)
-	int *p;
+
+int yyback(int *p, int m)
 {
 if (p==0) return(0);
 while (*p)
@@ -997,15 +998,18 @@ while (*p)
 	}
 return(0);
 }
-	/* the following are only used in the lex library */
-yyinput(){
+
+/* the following are only used in the lex library */
+int yyinput(){
 	return(input());
-	}
-yyoutput(c)
+}
+
+int yyoutput(c)
   int c; {
 	output(c);
-	}
-yyunput(c)
+}
+
+int yyunput(c)
    int c; {
 	unput(c);
-	}
+}
