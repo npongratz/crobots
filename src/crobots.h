@@ -208,6 +208,7 @@ struct intrin {
 /*****************************************************************************/
 /* Function declarations                                                     */
 /*****************************************************************************/
+int allocvar(char*, char *);
 void binaryop(int);
 void comp(char**, int);
 void count_miss(int, int);
