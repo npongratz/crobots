@@ -303,9 +303,7 @@ void plot_exp(int r, int n)
 
 /* robot_stat - update status info */
 
-robot_stat(n)
-
-int n;
+void robot_stat(int n)
 {
   int changed = 0;
 

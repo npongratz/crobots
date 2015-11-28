@@ -228,6 +228,7 @@ void plot_exp(int, int);
 void plot_miss(int, int);
 void plot_robot(int);
 void rand_pos(int);
+void robot_stat(int);
 void reset_comp();
 void robot_go(struct robot*);
 void show_cycle(long);
