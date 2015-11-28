@@ -376,7 +376,7 @@ int yyparse() {
 			
 case 1:
 { /* printf("IDENTIFIER\n"); */
-		if ((work = findvar(last_ident,var_tab)) == -1)
+		if ((work = findvar(last_ident,var_tab)) == -1) {
 		  if ((work = findvar(last_ident,ext_tab)) == -1) {
 		    if (findvar(last_ident,func_tab) == -1) {
 		      /* printf("\n***undeclared %s***\n",last_ident); */
@@ -384,16 +384,17 @@ case 1:
 		    }
 		    work = allocvar(last_ident,var_tab);
 		  }
-		  else
+		} else {
 		    work |= EXTERNAL;
+    }
 		if (!efetch(work))
 		  return(1);
-		} break;
+} break;
 case 2:
 { /*printf("CONSTANT\n"); */
 		 if (!econst(kk))
 		   return(1);
-		} break;
+} break;
 case 5:
 { /* printf("FCALL\n"); */
 		popid(func_ident,func_stack,&func_off); /* note ptr to off */

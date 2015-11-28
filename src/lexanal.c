@@ -58,7 +58,7 @@ long atol();
 int count();
 
 #define YYNEWLINE 10
-int yylex(){
+int yylex() {
   int nstr; extern int yyprevious;
   yyout = stdout;
   while((nstr = yylook()) >= 0)
