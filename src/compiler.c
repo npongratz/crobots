@@ -375,9 +375,7 @@ void dumpoff(char *pool)
 
 /* efetch - emit a fetch instruction */
 
-efetch(offset)
-
-int offset;
+int efetch(int offset)
 {
   if (++num_instr == CODESPACE) {
     r_flag = 1;
