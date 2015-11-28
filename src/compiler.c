@@ -602,9 +602,7 @@ int while_expr()
 
 
 /* close_while - close out the while nest */
-
-close_while()
-
+int close_while()
 {
   /* emit an unconditional branch */
   if (!econst(0L))
