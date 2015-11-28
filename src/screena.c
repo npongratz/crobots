@@ -19,20 +19,19 @@
 
 #define COLS  80
 #define LINES 25
-clear()
+void clear()
 {
   printf("\033[H\033[2J");
 }
 
-move(y,x)
-int y,x;
+void move(int y, int x)
 {
   printf("\033[%d;%dH",y,x);
 }
 
 /* dummy refresh function */
 
-refresh() {}
+void refresh() {}
 
 #ifdef LATTICE
 /* use lattice's console i/o routines instead of stdio */
