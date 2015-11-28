@@ -98,7 +98,7 @@ init_comp()
 /* reset_comp - resets the compiler for another file */
 /* completes the robot structure */
 
-reset_comp() 
+void reset_comp() 
 {
   int i, j;
   int found = 0;

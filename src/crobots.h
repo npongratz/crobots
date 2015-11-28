@@ -217,6 +217,7 @@ void move_miss(int);
 void move_robots(int);
 void play(char**, int);
 void rand_pos(int);
+void reset_comp();
 void robot_go(struct robot*);
 void show_cycle(long);
 void trace(char*);
