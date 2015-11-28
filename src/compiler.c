@@ -569,9 +569,7 @@ void close_if()
 
 
 /* new_while - start a nest for a new while statement */
-
-new_while()
-
+int new_while()
 {
   if (while_nest == NESTLEVEL) {
     fprintf(f_out,"\n** Error ** 'while' nest level exceeded\n");
