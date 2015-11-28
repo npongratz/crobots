@@ -12,6 +12,7 @@
 /* compiler.c - compiler routines in support of grammar.c */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "crobots.h"
 /* EXT causes externals to be declared without extern keyword in compiler.h */
@@ -22,8 +23,7 @@
 
 /* yyerror - simple error message on parser failure */
 
-yyerror(s)
-char *s;
+void yyerror(char *s)
 {
   int i;
   r_flag = 1;
@@ -35,7 +35,9 @@ char *s;
 }
 
 
+/* Pretty sure this is not needed, candidate for deletion. -np 20151127
 char *malloc();
+*/
 
 
 /* init_comp - initializes the compiler for one file */
@@ -98,7 +100,7 @@ void init_comp()
 /* reset_comp - resets the compiler for another file */
 /* completes the robot structure */
 
-void reset_comp() 
+int reset_comp()
 {
   int i, j;
   int found = 0;

@@ -229,12 +229,13 @@ void plot_miss(int, int);
 void plot_robot(int);
 void rand_pos(int);
 void robot_stat(int);
-void reset_comp();
+int reset_comp();
 void robot_go(struct robot*);
 void show_cycle(long);
 void trace(char*);
 void update_disp();
 int yyparse();
+void yyerror(char *)
 
 #ifdef UNIX
 #include <signal.h>
