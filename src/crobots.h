@@ -210,6 +210,7 @@ void count_miss(int, int);
 void cycle();
 void end_disp();
 int free_robot(int);
+void init_comp();
 void init_disp();
 void init_robot(int);
 void match(int, long, char**, int);
