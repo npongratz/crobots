@@ -354,10 +354,7 @@ int poolsize(char *pool)
 
 
 /* dumpoff - print a table of names and offsets in a symbol pool */
-
-dumpoff(pool)
-
-char *pool;
+void dumpoff(char *pool)
 {
   register int i;
   int count = 0;
