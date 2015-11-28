@@ -246,7 +246,7 @@ int yywrap()
 	return(1);
 }
 
-comment()
+int comment()
 {
 	char c, c1;
 
