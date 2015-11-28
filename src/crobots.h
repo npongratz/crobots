@@ -205,6 +205,7 @@ struct intrin {
 /*****************************************************************************/
 /* Function declarations                                                     */
 /*****************************************************************************/
+void comp(char**, int);
 void count_miss(int, int);
 void cycle();
 void end_disp();

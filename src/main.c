@@ -188,10 +188,7 @@ int main(int argc, char *argv[])
 
 /* comp - only compile the files with full info */
 
-comp(f,n)
-
-char *f[];
-int n;
+void comp( char *f[], int n)
 {
   int i;
 
