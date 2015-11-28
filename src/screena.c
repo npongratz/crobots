@@ -172,9 +172,7 @@ void draw_field()
 
 /* plot_robot - plot the robot position */
 
-plot_robot(n)
-
-int n;
+void plot_robot(int n)
 {
   int i, k;
   register int new_x, new_y;
