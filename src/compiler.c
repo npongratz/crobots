@@ -515,9 +515,7 @@ int eframe()
 
 
 /* new_if - start a nest for an if statement */
-
-new_if()
-
+int new_if()
 {
   if (if_nest == NESTLEVEL) {
     fprintf(f_out,"\n** Error ** 'if' nest level exceeded\n");
