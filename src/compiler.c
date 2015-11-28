@@ -469,9 +469,7 @@ int eretsub()
 
 
 /* ebranch - emit a  branch instruction */
-
-ebranch()
-
+int ebranch()
 {
   if (++num_instr == CODESPACE) {
     r_flag = 1;
