@@ -559,9 +559,7 @@ int else_part()
 
 
 /* close_if - close out an if nest */
-
-close_if()
-
+void close_if()
 {
   /* fix the not-else branch saved in else_part() */
   (ifs + if_nest)->fix_true->u.br = instruct;
