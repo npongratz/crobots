@@ -219,6 +219,7 @@ void draw_field();
 void dumpoff(char*);
 void dumpvar(long*, int);
 void end_disp();
+int findvar(char*, char*);
 int free_robot(int);
 void init_comp();
 void init_disp();
