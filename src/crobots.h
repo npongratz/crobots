@@ -206,7 +206,7 @@ struct intrin {
 ;
 
 /*****************************************************************************/
-/* Function declarations                                                     */
+/* Function prototypes                                                       */
 /*****************************************************************************/
 int allocvar(char*, char *);
 void binaryop(int);
@@ -238,6 +238,7 @@ void plot_exp(int, int);
 void plot_miss(int, int);
 void plot_robot(int);
 int poolsize(char*);
+int popid(char*, char*, int*);
 int printop(int);
 void rand_pos(int);
 void robot_stat(int);
