@@ -222,6 +222,7 @@ void robot_go(struct robot*);
 void show_cycle(long);
 void trace(char*);
 void update_disp();
+int yyparse();
 
 #ifdef UNIX
 #include <signal.h>
