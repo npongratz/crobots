@@ -30,7 +30,7 @@ union REGS {
 
 #define COLS  80
 #define LINES 25
-clear()
+void clear()
 {
   union REGS r;
   int intno = 0x10;	/* video bios call */
@@ -46,7 +46,7 @@ clear()
 
 }
 
-move(y,x)
+void move(y,x)
 int y,x;
 {
   union REGS r;
@@ -67,7 +67,7 @@ int y,x;
 
 /* dummy refresh function */
 
-refresh() {}
+void refresh() {}
 
 #ifdef LATTICE
 /* use lattice's console i/o routines instead of stdio */
