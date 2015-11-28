@@ -214,6 +214,7 @@ void count_miss(int, int);
 void cycle();
 void decinstr(struct instr *code);
 void draw_field();
+void dumpoff(char*);
 void dumpvar(long*, int);
 void end_disp();
 int free_robot(int);
