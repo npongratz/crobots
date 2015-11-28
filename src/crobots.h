@@ -229,6 +229,8 @@ int efetch(int);
 int eframe();
 int else_part();
 void end_disp();
+void end_func();
+int eretsub();
 int estore(int, int);
 int findvar(char*, char*);
 int free_robot(int);
