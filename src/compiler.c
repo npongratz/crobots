@@ -318,7 +318,6 @@ int stackid(char id[], char *stack, int *ptr)
 
 
 /* popid - unstacks an identifier, note pointer to stack offset */
-
 int popid(char id[], char *stack, int *ptr)
 {
   if (*ptr > 0) {
@@ -337,10 +336,7 @@ int popid(char id[], char *stack, int *ptr)
 
 
 /* poolsize - returns the size of a pool */
-
-poolsize(pool)
-
-char *pool;
+int poolsize(char *pool)
 {
   register int i;
 
