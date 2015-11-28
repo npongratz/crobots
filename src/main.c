@@ -14,6 +14,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /* INIT causes externals in crobots.h to have storage, & init intrinsic table */
 #define INIT 1 
@@ -46,7 +47,9 @@ int main(int argc, char *argv[])
   long time();
   long atol();
   long cur_time;
+  /* TODO: Determine whether this needs to be declared here. Suspect no. -np 20151127
   int srand();
+  */
 
 
   /* print version, copyright notice, GPL notice */
@@ -284,8 +287,10 @@ int n;
 
 #ifdef UNIX
   /* catch interrupt */
+  /* TODO: Figure this out later. -np 20151127
   if (signal(SIGINT,SIG_IGN) != SIG_IGN)
     signal(SIGINT,catch_int);
+  */
 #endif
 
   rand_pos(num_robots);

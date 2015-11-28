@@ -485,9 +485,7 @@ int op;
 
 /* robot_go - start the robot pointed to by r */
 
-robot_go(r)
-
-struct robot *r;
+void robot_go(struct robot *r)
 {
   register struct func *f;
   register int i;

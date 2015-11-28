@@ -214,6 +214,7 @@ void match(int, long, char**, int);
 void move_miss(int);
 void move_robots(int);
 void rand_pos(int);
+void robot_go(struct robot*);
 void show_cycle(long);
 void trace(char*);
 void update_disp();
