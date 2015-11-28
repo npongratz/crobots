@@ -689,10 +689,7 @@ void decinstr(struct instr *code)
 
 
 /* printop - print a binary operation code */
-
-printop(op)
-
-int op;
+int printop(int op)
 {
 
   switch (op) {
@@ -738,7 +735,7 @@ int op;
       break;
 
     case  '%':
-      fprintf(f_out,"%");
+      fprintf(f_out,"%%");
       break;
 
     case  LEFT_OP:
