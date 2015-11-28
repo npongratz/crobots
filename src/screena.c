@@ -46,7 +46,7 @@ refresh() {}
 
 /* init_disp - initialize display */
 
-init_disp()
+void init_disp()
 {
   clear();
   draw_field();

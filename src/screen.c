@@ -60,7 +60,7 @@ static int col_3;    /* column for cpu cycle count*/
 
 /* init_disp - initialize display */
 
-init_disp()
+void init_disp()
 {
   initscr();
   clear();

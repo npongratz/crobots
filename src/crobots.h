@@ -208,6 +208,7 @@ struct intrin {
 void count_miss(int, int);
 void cycle();
 void end_disp();
+void init_disp();
 void init_robot(int);
 void match(int, long, char**, int);
 void move_miss(int);
