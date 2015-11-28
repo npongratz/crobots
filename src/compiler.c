@@ -392,10 +392,7 @@ int efetch(int offset)
 
 /* estore - emit a store instruction */
 
-estore(offset, operator)
-
-int offset;
-int operator;
+int estore(int offset, int operator)
 {
   if (++num_instr == CODESPACE) {
     r_flag = 1;
