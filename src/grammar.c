@@ -614,12 +614,13 @@ case 51:
 { /* printf("ASSIGNMENT\n"); */
 		/* func_ident used as temp storage */
 		popid(func_ident,var_stack,&var_off); /* note ptr to off */
-		if ((work = findvar(func_ident,var_tab)) == -1)
+		if ((work = findvar(func_ident,var_tab)) == -1) {
 		  if ((work = findvar(func_ident,ext_tab)) == -1) {
 		    work = allocvar(func_ident,var_tab);
 		  }
-		  else
+    } else {
 		    work |= EXTERNAL;
+    }
 		if (!estore(work,*(op_stack + op_off)))
 		  return(1);
 		op_off--;
