@@ -538,9 +538,7 @@ int new_if()
 
 
 /* else_part - the else part of an if-then-else */
-
-else_part()
-
+int else_part()
 {	
   /* setup a unconditional branch around the else part */
   if (!econst(0L))
