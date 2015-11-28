@@ -631,6 +631,7 @@ int decompile(struct instr *code)
     decinstr(code);
     code++;
   }
+  return 0;
 }
        
 
@@ -827,6 +828,6 @@ int printop(int op)
 
   }
 
-
+  return 0;
 }
 
