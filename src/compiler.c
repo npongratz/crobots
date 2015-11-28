@@ -588,9 +588,7 @@ int new_while()
 
 
 /* while_expr - while expression loop fix */
-
-while_expr()
-
+int while_expr()
 {
   if (!ebranch())
     return (0);
