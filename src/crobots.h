@@ -223,6 +223,7 @@ int econst(long);
 int efcall(int);
 int efetch(int);
 void end_disp();
+int estore(int, int);
 int findvar(char*, char*);
 int free_robot(int);
 void init_comp();
