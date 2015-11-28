@@ -257,10 +257,7 @@ void plot_miss(int r, int n)
 
 /* plot_exp - plot the missile exploding */
 
-plot_exp(r,n)
-
-int r;
-int n;
+void plot_exp(int r, int n)
 {
   int c, i, p, hold_x, hold_y, k;
   register int new_x, new_y;
