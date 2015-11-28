@@ -205,9 +205,11 @@ struct intrin {
 /*****************************************************************************/
 /* Function declarations                                                     */
 /*****************************************************************************/
+void binaryop(int);
 void comp(char**, int);
 void count_miss(int, int);
 void cycle();
+void decinstr(struct instr *code);
 void end_disp();
 int free_robot(int);
 void init_comp();

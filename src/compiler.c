@@ -699,9 +699,7 @@ struct instr *code;
 
 /* decinstr - print one instruct; watch out for pointer to long conversion! */
 
-decinstr(code)
-
-struct instr *code;
+void decinstr(struct instr *code)
 {
 
   fprintf(f_out,"%8ld : ",(long) code);	/* this could be flakey */

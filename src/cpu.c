@@ -325,9 +325,7 @@ void cycle()
 /* binaryop - pops 2 operands, performs operation, pushes result */
 /*            divide by zero handled by returning 0 */
 
-binaryop(op)
-
-int op;
+void binaryop(int op)
 {
   long x,y;
 
