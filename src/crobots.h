@@ -241,6 +241,7 @@ void match(int, long, char**, int);
 void move_miss(int);
 void move_robots(int);
 int new_func();
+int new_if();
 void play(char**, int);
 void plot_exp(int, int);
 void plot_miss(int, int);
