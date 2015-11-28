@@ -56,189 +56,190 @@ int count();
 
 # define YYNEWLINE 10
 int yylex(){
-int nstr; extern int yyprevious;
-while((nstr = yylook()) >= 0)
-yyfussy: switch(nstr){
-case 0:
-if(yywrap()) return(0); break;
-case 1:
-		{ comment(); }
-break;
-case 2:
-		{ count(); return(AUTO); }
-break;
-case 3:
-		{ count(); return(BREAK); }
-break;
-case 4:
-		{ count(); return(ELSE); }
-break;
-case 5:
-	{ count(); return(EXTERN); }
-break;
-case 6:
-		{ count(); return(FOR); }
-break;
-case 7:
-		{ count(); return(IF); }
-break;
-case 8:
-		{ count(); return(INT); }
-break;
-case 9:
-		{ count(); return(LONG); }
-break;
-case 10:
-	{ count(); return(REGISTER); }
-break;
-case 11:
-	{ count(); return(RETURN); }
-break;
-case 12:
-		{ count(); return(WHILE); }
-break;
-case 13:
-	{ count(); 
-				strncpy(last_ident,yytext,ILEN-1);
-				last_ident[ILEN-1] = '\0';
-				return(IDENTIFIER); }
-break;
-case 14:
-    		{ count(); 
-				kk = atol(yytext);
-				return(CONSTANT); }
-break;
-case 15:
-		{ count(); return(RIGHT_ASSIGN); }
-break;
-case 16:
-		{ count(); return(LEFT_ASSIGN); }
-break;
-case 17:
-		{ count(); return(ADD_ASSIGN); }
-break;
-case 18:
-		{ count(); return(SUB_ASSIGN); }
-break;
-case 19:
-		{ count(); return(MUL_ASSIGN); }
-break;
-case 20:
-		{ count(); return(DIV_ASSIGN); }
-break;
-case 21:
-		{ count(); return(MOD_ASSIGN); }
-break;
-case 22:
-		{ count(); return(AND_ASSIGN); }
-break;
-case 23:
-		{ count(); return(XOR_ASSIGN); }
-break;
-case 24:
-		{ count(); return(OR_ASSIGN); }
-break;
-case 25:
-		{ count(); return(RIGHT_OP); }
-break;
-case 26:
-		{ count(); return(LEFT_OP); }
-break;
-case 27:
-		{ count(); return(INC_OP); }
-break;
-case 28:
-		{ count(); return(DEC_OP); }
-break;
-case 29:
-		{ count(); return(AND_OP); }
-break;
-case 30:
-		{ count(); return(OR_OP); }
-break;
-case 31:
-		{ count(); return(LE_OP); }
-break;
-case 32:
-		{ count(); return(GE_OP); }
-break;
-case 33:
-		{ count(); return(EQ_OP); }
-break;
-case 34:
-		{ count(); return(NE_OP); }
-break;
-case 35:
-		{ count(); return(';'); }
-break;
-case 36:
-		{ count(); return('{'); }
-break;
-case 37:
-		{ count(); return('}'); }
-break;
-case 38:
-		{ count(); return(','); }
-break;
-case 39:
-		{ count(); return('='); }
-break;
-case 40:
-		{ count(); return('('); }
-break;
-case 41:
-		{ count(); return(')'); }
-break;
-case 42:
-		{ count(); return('.'); }
-break;
-case 43:
-		{ count(); return('&'); }
-break;
-case 44:
-		{ count(); return('!'); }
-break;
-case 45:
-		{ count(); return('~'); }
-break;
-case 46:
-		{ count(); return('-'); }
-break;
-case 47:
-		{ count(); return('+'); }
-break;
-case 48:
-		{ count(); return('*'); }
-break;
-case 49:
-		{ count(); return('/'); }
-break;
-case 50:
-		{ count(); return('%'); }
-break;
-case 51:
-		{ count(); return('<'); }
-break;
-case 52:
-		{ count(); return('>'); }
-break;
-case 53:
-		{ count(); return('^'); }
-break;
-case 54:
-		{ count(); return('|'); }
-break;
-case 55:
-	{ count(); }
-break;
-case 56:
-		{ /* ignore bad characters */ }
-break;
-case -1:
-break;
-default:
-fprintf(yyout,"bad switch yylook %d",nstr);
-} return(0); }
+  int nstr; extern int yyprevious;
+  while((nstr = yylook()) >= 0)
+  yyfussy: switch(nstr){
+  case 0:
+  if(yywrap()) return(0); break;
+  case 1:
+      { comment(); }
+  break;
+  case 2:
+      { count(); return(AUTO); }
+  break;
+  case 3:
+      { count(); return(BREAK); }
+  break;
+  case 4:
+      { count(); return(ELSE); }
+  break;
+  case 5:
+    { count(); return(EXTERN); }
+  break;
+  case 6:
+      { count(); return(FOR); }
+  break;
+  case 7:
+      { count(); return(IF); }
+  break;
+  case 8:
+      { count(); return(INT); }
+  break;
+  case 9:
+      { count(); return(LONG); }
+  break;
+  case 10:
+    { count(); return(REGISTER); }
+  break;
+  case 11:
+    { count(); return(RETURN); }
+  break;
+  case 12:
+      { count(); return(WHILE); }
+  break;
+  case 13:
+    { count(); 
+          strncpy(last_ident,yytext,ILEN-1);
+          last_ident[ILEN-1] = '\0';
+          return(IDENTIFIER); }
+  break;
+  case 14:
+          { count(); 
+          kk = atol(yytext);
+          return(CONSTANT); }
+  break;
+  case 15:
+      { count(); return(RIGHT_ASSIGN); }
+  break;
+  case 16:
+      { count(); return(LEFT_ASSIGN); }
+  break;
+  case 17:
+      { count(); return(ADD_ASSIGN); }
+  break;
+  case 18:
+      { count(); return(SUB_ASSIGN); }
+  break;
+  case 19:
+      { count(); return(MUL_ASSIGN); }
+  break;
+  case 20:
+      { count(); return(DIV_ASSIGN); }
+  break;
+  case 21:
+      { count(); return(MOD_ASSIGN); }
+  break;
+  case 22:
+      { count(); return(AND_ASSIGN); }
+  break;
+  case 23:
+      { count(); return(XOR_ASSIGN); }
+  break;
+  case 24:
+      { count(); return(OR_ASSIGN); }
+  break;
+  case 25:
+      { count(); return(RIGHT_OP); }
+  break;
+  case 26:
+      { count(); return(LEFT_OP); }
+  break;
+  case 27:
+      { count(); return(INC_OP); }
+  break;
+  case 28:
+      { count(); return(DEC_OP); }
+  break;
+  case 29:
+      { count(); return(AND_OP); }
+  break;
+  case 30:
+      { count(); return(OR_OP); }
+  break;
+  case 31:
+      { count(); return(LE_OP); }
+  break;
+  case 32:
+      { count(); return(GE_OP); }
+  break;
+  case 33:
+      { count(); return(EQ_OP); }
+  break;
+  case 34:
+      { count(); return(NE_OP); }
+  break;
+  case 35:
+      { count(); return(';'); }
+  break;
+  case 36:
+      { count(); return('{'); }
+  break;
+  case 37:
+      { count(); return('}'); }
+  break;
+  case 38:
+      { count(); return(','); }
+  break;
+  case 39:
+      { count(); return('='); }
+  break;
+  case 40:
+      { count(); return('('); }
+  break;
+  case 41:
+      { count(); return(')'); }
+  break;
+  case 42:
+      { count(); return('.'); }
+  break;
+  case 43:
+      { count(); return('&'); }
+  break;
+  case 44:
+      { count(); return('!'); }
+  break;
+  case 45:
+      { count(); return('~'); }
+  break;
+  case 46:
+      { count(); return('-'); }
+  break;
+  case 47:
+      { count(); return('+'); }
+  break;
+  case 48:
+      { count(); return('*'); }
+  break;
+  case 49:
+      { count(); return('/'); }
+  break;
+  case 50:
+      { count(); return('%'); }
+  break;
+  case 51:
+      { count(); return('<'); }
+  break;
+  case 52:
+      { count(); return('>'); }
+  break;
+  case 53:
+      { count(); return('^'); }
+  break;
+  case 54:
+      { count(); return('|'); }
+  break;
+  case 55:
+    { count(); }
+  break;
+  case 56:
+      { /* ignore bad characters */ }
+  break;
+  case -1:
+  break;
+  default:
+  fprintf(yyout,"bad switch yylook %d",nstr);
+  } return(0);
+}
 /* end of yylex */
 
 int yywrap()
