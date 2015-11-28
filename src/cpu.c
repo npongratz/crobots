@@ -506,10 +506,7 @@ void robot_go(struct robot *r)
 
 /* dumpvar - dump a variable pool or stack for length size */
 
-dumpvar(pool,size)
-
-long *pool;
-int size;
+void dumpvar(long *pool, int size)
 {
   register int i;
 

@@ -9,6 +9,9 @@
 /*                                                                           */
 /*****************************************************************************/
 
+/* common includes */
+#include <string.h>
+
 /* common defines */
 
 /* note-the INIT flag (or lack of it) causes extern for all but one module */
@@ -210,6 +213,7 @@ void comp(char**, int);
 void count_miss(int, int);
 void cycle();
 void decinstr(struct instr *code);
+void dumpvar(long*, int);
 void end_disp();
 int free_robot(int);
 void init_comp();
