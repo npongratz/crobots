@@ -210,11 +210,12 @@ struct intrin {
 /*****************************************************************************/
 int allocvar(char*, char *);
 void binaryop(int);
+int comment();
 void comp(char**, int);
 void count_miss(int, int);
 void cycle();
 void decinstr(struct instr*);
-int decompile(struct instr*)
+int decompile(struct instr*);
 void draw_field();
 void dumpoff(char*);
 void dumpvar(long*, int);
@@ -224,6 +225,9 @@ int free_robot(int);
 void init_comp();
 void init_disp();
 void init_robot(int);
+int lexgetc();
+int lexputc(int);
+int lexungetc(int);
 void match(int, long, char**, int);
 void move_miss(int);
 void move_robots(int);
@@ -240,8 +244,11 @@ void robot_go(struct robot*);
 void show_cycle(long);
 void trace(char*);
 void update_disp();
+int yyback(int*, int);
+int yylook();
 int yyparse();
-void yyerror(char *)
+void yyerror(char *);
+int yywrap();
 
 #ifdef UNIX
 #include <signal.h>

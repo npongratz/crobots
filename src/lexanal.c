@@ -295,20 +295,18 @@ int lexgetc()
   return ((c == EOF) ? 0 : c);
 }
 
-int lexungetc(c)
-int c;
+int lexungetc(int c)
 {
   ungetc(c,f_in);
 }
 
-int lexputc(c)
-int c;
+int lexputc(int c)
 {
   fputc(c,f_out);
 }
 
 /* these two dummy routines for lex's debug options */
-void allprint() {}
+void allprint(int c) {}
 
 void sprint(char *s) {} 
 
@@ -885,7 +883,7 @@ int yylook(){
 		yyestate = yystate = yybgin;
 		if (yyprevious==YYNEWLINE) yystate++;
 		for (;;){
-			if(debug)fprintf(yyout,"state %d\n",yystate-yysvec-1);
+			if(debug) fprintf(yyout,"state %ld\n",yystate-yysvec-1);
 			yyt = yystate->yystoff;
 			if(yyt == yycrank && !yyfirst){  /* may not be any transitions */
 				yyz = yystate->yyother;
