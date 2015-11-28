@@ -84,7 +84,7 @@ void end_disp()
 
 /* draw_field - draws the playing field and status boxes */
 
-draw_field()
+void draw_field()
 {
   int i, j;
 
@@ -151,9 +151,7 @@ draw_field()
 
 /* plot_robot - plot the robot position */
 
-plot_robot(n)
-
-int n;
+void plot_robot(int n)
 {
   int i, k;
   register int new_x, new_y;
