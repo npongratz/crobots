@@ -269,10 +269,7 @@ void end_func()
 
 /* allocvar - allocates a variable in a pool, returns offset */
 
-allocvar(s,pool) 
-
-char s[];
-char *pool;
+int allocvar(char s[], char *pool)
 {
   register int i;
 
