@@ -423,12 +423,13 @@ case 7:
 		postfix++;
 		if (!econst(1L))
 		  return(1);
-		if ((work = findvar(last_ident,var_tab)) == -1)
+		if ((work = findvar(last_ident,var_tab)) == -1) {
 		  if ((work = findvar(last_ident,ext_tab)) == -1) {
 		    work = allocvar(last_ident,var_tab);
 		  }
-		  else
+    } else {
 		    work |= EXTERNAL;
+    }
 		if(!estore(work,ADD_ASSIGN))
 		  return(1);
 		} break;
@@ -438,12 +439,13 @@ case 8:
 		postfix++;
 		if (!econst(1L))
 		  return(1);
-		if ((work = findvar(last_ident,var_tab)) == -1)
+		if ((work = findvar(last_ident,var_tab)) == -1) {
 		  if ((work = findvar(last_ident,ext_tab)) == -1) {
 		    work = allocvar(last_ident,var_tab);
 		  }
-		  else
+    } else {
 		    work |= EXTERNAL;
+    }
 		if (!estore(work,SUB_ASSIGN))
 		  return(1);
 		} break;
