@@ -231,6 +231,7 @@ void play(char**, int);
 void plot_exp(int, int);
 void plot_miss(int, int);
 void plot_robot(int);
+int poolsize(char*);
 int printop(int);
 void rand_pos(int);
 void robot_stat(int);
