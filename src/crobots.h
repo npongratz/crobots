@@ -219,6 +219,7 @@ int decompile(struct instr*);
 void draw_field();
 void dumpoff(char*);
 void dumpvar(long*, int);
+int econst(long);
 int efetch(int);
 void end_disp();
 int findvar(char*, char*);
