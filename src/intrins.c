@@ -210,6 +210,7 @@ long c_drive()
   cur_robot->d_speed = (int) speed;
   
   push(1L);
+  return 0;
 }
 
 
@@ -218,6 +219,7 @@ long c_drive()
 long c_damage()
 {
   push((long) cur_robot->damage);
+  return 0;
 }
 
 
@@ -226,6 +228,7 @@ long c_damage()
 long c_speed()
 {
   push((long) cur_robot->speed);
+  return 0;
 }
 
 
@@ -234,6 +237,7 @@ long c_speed()
 long c_loc_x()
 {
   push((long) cur_robot->x / CLICK);
+  return 0;
 }
 
 
@@ -243,6 +247,7 @@ long c_loc_y()
 {
   int y;
   push((long) cur_robot->y / CLICK);
+  return 0;
 }
 
 
@@ -261,6 +266,8 @@ long c_rand()
     push(0L);
   else
     push((long) ((long)(rand()) % limit));
+
+  return 0;
 }
 
 
@@ -276,6 +283,7 @@ long c_sin()
   degree = (long) lsin(degree);
 
   push(degree);
+  return 0;
 }
 
 
@@ -291,6 +299,7 @@ long c_cos()
   degree = (long) lcos(degree);
 
   push(degree);
+  return 0;
 }
 
 
@@ -305,6 +314,7 @@ long c_tan()
   degree = (long) (tan((double) degree / RAD_DEG) * SCALE);
 
   push(degree);
+  return 0;
 }
 
 
@@ -320,6 +330,7 @@ long c_atan()
   degree = (long) (atan((double) ratio / SCALE) * RAD_DEG);
 
   push(degree);
+  return 0;
 }
 
 
@@ -339,6 +350,7 @@ long c_sqrt()
   x = (long) (sqrt((double) x));
 
   push(x);
+  return 0;
 }
 
 
