@@ -438,10 +438,7 @@ int ebinop(int c)
 
 
 /* efcall - emit a fcall instruction */
-
-efcall (c)
-
-int c;
+int efcall(int c)
 {
   if (++num_instr == CODESPACE) {
     r_flag = 1;
