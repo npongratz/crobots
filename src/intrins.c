@@ -13,6 +13,7 @@
 /* degree directions assumed: 0 = east; 90 = north; 180 = west; 270 = south */
 /* 0,0 = lower left, max_x,max_y = upper right; i.e., quadrant 1 */
 
+#include <stdio.h>
 #include "crobots.h"
 #include "math.h"
 
@@ -112,6 +113,7 @@ long c_scan()
 
   push((long) close_dist);
 
+  return 0;
 }
 
 /* c_cannon - fire a shot */
@@ -132,7 +134,7 @@ long c_cannon()
   else
     if (distance < 0L) {
       push(1L);
-      return;
+      return 0;
     }
   degree = pop();
   if (degree < 0L)
@@ -150,7 +152,7 @@ long c_cannon()
     if (r_debug)
       printf("reloading: %d\n",cur_robot->reload);
     push(0L);
-    return;
+    return 0;
   }
 
   /* fire cannon, if one of two missiles are available */
@@ -170,11 +172,12 @@ long c_cannon()
       missiles[r][i].curr_dist = 0;
       missiles[r][i].count = EXP_COUNT;
       push(1L);  
-      return;
+      return 0;
     }
   }
 
-  push(0L);  
+  push(0L);
+  return 0;
 
 }
 
