@@ -210,6 +210,7 @@ struct intrin {
 /*****************************************************************************/
 int allocvar(char*, char *);
 void binaryop(int);
+void close_if();
 int comment();
 void comp(char**, int);
 void count_miss(int, int);
@@ -225,6 +226,7 @@ int econst(long);
 int efcall(int);
 int efetch(int);
 int eframe();
+int else_part();
 void end_disp();
 int estore(int, int);
 int findvar(char*, char*);
@@ -238,6 +240,7 @@ int lexungetc(int);
 void match(int, long, char**, int);
 void move_miss(int);
 void move_robots(int);
+int new_func();
 void play(char**, int);
 void plot_exp(int, int);
 void plot_miss(int, int);
