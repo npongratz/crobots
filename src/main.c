@@ -225,8 +225,7 @@ int n;
 
 
 /* play - watch the robots compete */
-
-play(char *f[], int n)
+void play(char *f[], int n)
 {
   int num_robots = 0;
   int robotsleft;
