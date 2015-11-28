@@ -422,10 +422,7 @@ printf("\n\n**econst*\n\n");
 
 
 /* ebinop - emit a binop instruction */
-
-ebinop(c)
-
-int c;
+int ebinop(int c)
 {
   if (++num_instr == CODESPACE) {
     r_flag = 1;
