@@ -201,8 +201,7 @@ int reset_comp()
 
 
 /* new_func - reset the compiler for a new function within the same file */
-
-new_func()
+int new_func()
 {
   register int i;
 
@@ -236,7 +235,7 @@ new_func()
 
 /* end_func - cleanup the end of a function */
 
-end_func() 
+void end_func()
 {
   register int i;
 
