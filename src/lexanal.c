@@ -1,18 +1,18 @@
-# include "stdio.h"
-# define U(x) x
-# define NLSTATE yyprevious=YYNEWLINE
-# define BEGIN yybgin = yysvec + 1 +
-# define INITIAL 0
-# define YYLERR yysvec
-# define YYSTATE (yyestate-yysvec-1)
-# define YYOPTIM 1
-# define YYLMAX 200
-# define output(c) putc(c,yyout)
-# define input() (((yytchar=yysptr>yysbuf?U(*--yysptr):getc(yyin))==10?(yylineno++,yytchar):yytchar)==EOF?0:yytchar)
-# define unput(c) {yytchar= (c);if(yytchar=='\n')yylineno--;*yysptr++=yytchar;}
-# define yymore() (yymorfg=1)
-# define ECHO fprintf(yyout, "%s",yytext)
-# define REJECT { nstr = yyreject(); goto yyfussy;}
+#include "stdio.h"
+#define U(x) x
+#define NLSTATE yyprevious=YYNEWLINE
+#define BEGIN yybgin = yysvec + 1 +
+#define INITIAL 0
+#define YYLERR yysvec
+#define YYSTATE (yyestate-yysvec-1)
+#define YYOPTIM 1
+#define YYLMAX 200
+#define output(c) putc(c,yyout)
+#define input() (((yytchar=yysptr>yysbuf?U(*--yysptr):getc(yyin))==10?(yylineno++,yytchar):yytchar)==EOF?0:yytchar)
+#define unput(c) {yytchar= (c);if(yytchar=='\n')yylineno--;*yysptr++=yytchar;}
+#define yymore() (yymorfg=1)
+#define ECHO fprintf(yyout, "%s",yytext)
+#define REJECT { nstr = yyreject(); goto yyfussy;}
 int yyleng; extern char yytext[];
 int yymorfg;
 extern char *yysptr, yysbuf[];
@@ -57,7 +57,7 @@ extern struct yysvf yysvec[], *yybgin;
 long atol();
 int count();
 
-# define YYNEWLINE 10
+#define YYNEWLINE 10
 int yylex(){
   int nstr; extern int yyprevious;
   yyout = stdout;
@@ -647,7 +647,7 @@ int yyvstop[] = {
 13,
 0,
 0};
-# define YYTYPE char
+#define YYTYPE char
 struct yywork { YYTYPE verify, advance; } yycrank[] = {
 0,0,	0,0,	1,3,	0,0,	
 0,0,	0,0,	0,0,	0,0,	
@@ -856,8 +856,8 @@ char yyextra[] = {
 0,0,0,0,0,0,0,0,
 0};
 int yylineno =1;
-# define YYU(x) x
-# define NLSTATE yyprevious=YYNEWLINE
+#define YYU(x) x
+#define NLSTATE yyprevious=YYNEWLINE
 char yytext[YYLMAX];
 struct yysvf *yylstate [YYLMAX], **yylsp, **yyolsp;
 char yysbuf[YYLMAX];
