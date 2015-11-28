@@ -319,11 +319,7 @@ int stackid(char id[], char *stack, int *ptr)
 
 /* popid - unstacks an identifier, note pointer to stack offset */
 
-popid(id,stack,ptr)
-
-char id[];
-char *stack;
-int *ptr;
+int popid(char id[], char *stack, int *ptr)
 {
   if (*ptr > 0) {
     strcpy(id,stack + (*ptr * ILEN));
