@@ -58,7 +58,7 @@ extern short yyerrflag;
 #define YYMAXDEPTH 150
 #endif
 #ifndef YYSTYPE
-#define YYSTYPE int
+typedef int YYSTYPE;
 #endif
 YYSTYPE yylval, yyval;
 #define YYERRCODE 256
