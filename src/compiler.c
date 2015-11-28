@@ -778,7 +778,7 @@ int printop(int op)
       break;
 
     case  MOD_ASSIGN:
-      fprintf(f_out,"%=");
+      fprintf(f_out,"%%=");
       break;
 
     case  ADD_ASSIGN:
