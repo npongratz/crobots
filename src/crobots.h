@@ -220,6 +220,7 @@ void draw_field();
 void dumpoff(char*);
 void dumpvar(long*, int);
 int ebinop(int);
+int echop();
 int econst(long);
 int efcall(int);
 int efetch(int);
